@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JAVASCRIPT-Variable</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .box {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px;
+            box-shadow: 0 2px 5px gray;
+        }
+
+        .var-box {
+            border-left: 10px solid red;
+        }
+
+        .let-box {
+            border-left: 10px solid green;
+        }
+
+        .const-box {
+            border-left: 10px solid blue;
+        }
+
+        h1 {
+            color: darkblue;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .example {
+            background: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-family: monospace;
+        }
+
+        button {
+            background: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .result {
+            background: #e8f5e8;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            display: none;
+        }
+
+        .comparison {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .comparison td,
+        .comparison th {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .comparison th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .tip {
+            background: #fffacd;
+            padding: 10px;
+            border-left: 5px solid gold;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1> Variables </h1>
+
+    <p><strong>Think:</strong> Variable is like a box where you keep values. Like keeping books in a school bag!</p>
+
+    <!-- VAR Section -->
+    <div class="box var-box">
+        <h2> VAR - Old Box</h2>
+        <p><strong>This one:</strong></p>
+        <ul>
+            <li>Can make two boxes with same name</li>
+            <li>Can change box value</li>
+            <li>Visible in whole class (function)</li>
+        </ul>
+
+        <div class="example">
+            // Example:<br>
+            var name = "Wahab";<br>
+            var name = "Hammad"; //  Works<br>
+            name = "Saif"; //  Value changed
+        </div>
+
+        <button onclick="showVarExample()">Click to See</button>
+
+        <div class="result" id="varResult">
+            <strong>Result:</strong> <span id="varOutput"></span>
+        </div>
+    </div>
+    <!-- VAR SECTION END -->
+
+
+    <!-- LET Section -->
+    <div class="box let-box">
+        <h2> LET - New Box</h2>
+        <p><strong>This one:</strong></p>
+        <ul>
+            <li>Can make ONLY ONE box with same name</li>
+            <li>Can change box value</li>
+            <li>Visible only in its room (block)</li>
+        </ul>
+
+        <div class="example">
+            // Example:<br>
+            let age = 20;<br>
+            // let age = 21; //  ERROR!<br>
+            age = 21; //  Value changed
+        </div>
+
+        <button onclick="showLetExample()">Click to See</button>
+
+        <div class="result" id="letResult">
+            <strong>Result:</strong> <span id="letOutput"></span>
+        </div>
+    </div>
+
+    <!-- CONST Section -->
+    <div class="box const-box">
+        <h2> CONST - Permanent Box</h2>
+        <p><strong>This one:</strong></p>
+        <ul>
+            <li>Can make ONLY ONE box with same name</li>
+            <li>CANNOT change box value</li>
+            <li>Must put value first time itself</li>
+        </ul>
+
+        <div class="example">
+            // Example:<br>
+            const birthday = "7 November";<br>
+            // birthday = "26 January"; //  ERROR!<br><br>
+
+            // But can change inside object:<br>
+            const student = { name: "Saif" };<br>
+            student.age = 17; //  Works
+        </div>
+
+        <button onclick="showConstExample()">Click to See</button>
+
+        <div class="result" id="constResult">
+            <strong>Result:</strong> <span id="constOutput"></span>
+        </div>
+    </div>
+
+    <!-- Simple Table -->
+    <h2>📊 Simple Comparison</h2>
+    <table class="comparison">
+        <tr>
+            <th>What</th>
+            <th>var</th>
+            <th>let</th>
+            <th>const</th>
+        </tr>
+        <tr>
+            <td>Can declare again?</td>
+            <td>✅ Yes</td>
+            <td>❌ No</td>
+            <td>❌ No</td>
+        </tr>
+        <tr>
+            <td>Can change value?</td>
+            <td>✅ Yes</td>
+            <td>✅ Yes</td>
+            <td>❌ No</td>
+        </tr>
+        <tr>
+            <td>Need value first time?</td>
+            <td>❌ No</td>
+            <td>❌ No</td>
+            <td>✅ Yes</td>
+        </tr>
+    </table>
+
+    <!-- Real Life Examples -->
+    <h2>💡 Real Life Examples</h2>
+    <div class="tip">
+        <strong>Phone Book Example:</strong><br><br>
+
+        <div class="example">
+            // CONST - Will never change<br>
+            const COUNTRY_CODE = "+91";<br><br>
+
+            // LET - Can change<br>
+            let mobileNumber = "9876543210";<br>
+            mobileNumber = "9876543211"; // Number changed<br><br>
+
+            // VAR - Old way (avoid)<br>
+            var contactName = "Saif";<br>
+            var contactName = "Kashan"; // Declared again - confusion!
+        </div>
+    </div>
+
+    <!-- Practice Section -->
+    <h2>✏️ Try Yourself</h2>
+    <div class="box">
+        <p>Edit this code and see:</p>
+
+        <div class="example" id="practiceCode">
+            let score = 10;<br>
+            score = score + 5;<br>
+            console.log("Score: " + score);<br><br>
+
+            const pi = 3.14;<br>
+            // pi = 3.15; // Try uncommenting this
+        </div>
+
+        <button onclick="runPractice()">Run Code</button>
+        <button onclick="resetPractice()">Reset</button>
+
+        <div class="result" id="practiceResult">
+            <strong>Output:</strong> <span id="practiceOutput"></span>
+        </div>
+    </div>
+
+    <!-- Simple Rules -->
+    <h2>📝 Simple Rules to Remember</h2>
+    <ol>
+        <li>Use <strong>const</strong> when value won't change</li>
+        <li>Use <strong>let</strong> when value will change</li>
+        <li>Don't use <strong>var</strong> (it's old)</li>
+    </ol>
+
+
+    <script>
+        // VAR Example
+        function showVarExample() {
+            var name = "Wahab";
+            var name = "Hammad"; // Declare again
+            name = "Saif"; // Change value
+
+            document.getElementById('varOutput').textContent =
+                "Name value now: " + name + " (Can declare again)";
+            document.getElementById('varResult').style.display = 'block';
+        }
+
+        // LET Example
+        function showLetExample() {
+            let age = 20;
+            // let age = 21; // ERROR if uncommented
+            age = 21; // Change value
+
+            document.getElementById('letOutput').textContent =
+                "Age now: " + age + " (Cannot declare again)";
+            document.getElementById('letResult').style.display = 'block';
+        }
+
+        // CONST Example
+        function showConstExample() {
+            const birthday = "7 November";
+
+            // If we uncomment this, error comes:
+            // birthday = "26 January";
+
+            const student = { name: "Saif" };
+            student.age = 17; // This works
+
+            document.getElementById('constOutput').textContent =
+                "Birthday: " + birthday + ", Student age: " + student.age;
+            document.getElementById('constResult').style.display = 'block';
+        }
+
+        // Practice Section
+        function runPractice() {
+            let output = "";
+
+            try {
+                let score = 10;
+                score = score + 5;
+                output += "Score: " + score + "<br>";
+
+                const pi = 3.14;
+                // pi = 3.15; // Uncomment to see error
+                output += "Pi value: " + pi;
+
+                document.getElementById('practiceOutput').innerHTML = output;
+                document.getElementById('practiceResult').style.display = 'block';
+            } catch (error) {
+                document.getElementById('practiceOutput').textContent =
+                    "Error: " + error.message;
+                document.getElementById('practiceResult').style.display = 'block';
+            }
+        }
+
+        function resetPractice() {
+            document.getElementById('practiceCode').innerHTML =
+                `let score = 10;<br>
+        score = score + 5;<br>
+        console.log("Score: " + score);<br><br>
+        
+        const pi = 3.14;<br>
+        // pi = 3.15; // Try uncommenting this`;
+
+            document.getElementById('practiceResult').style.display = 'none';
+        }
+
+        // Simple example
+        console.log("Variables basic tutorial running!");
+    </script>
+
+</body>
+
+</html>
