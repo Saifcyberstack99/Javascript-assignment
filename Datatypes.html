@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Data Types - Simple Tutorial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>JavaScript Data Types</h1>
+    
+    <div class="container">
+        <!-- Primitive Types -->
+        <div class="section">
+            <h2>Primitive Types (7)</h2>
+            
+            <div class="example">
+                <h3>1. Number</h3>
+                <p><code>let age = 25;</code></p>
+                <button onclick="showNumber()">Run Example</button>
+            </div>
+            
+            <div class="example">
+                <h3>2. String</h3>
+                <p><code>let name = "John";</code></p>
+                <button onclick="showString()">Run Example</button>
+            </div>
+            
+            <div class="example">
+                <h3>3. Boolean</h3>
+                <p><code>let isStudent = true;</code></p>
+                <button onclick="showBoolean()">Run Example</button>
+            </div>
+            
+            <div class="example">
+                <h3>4. Undefined</h3>
+                <p><code>let x;</code></p>
+                <button onclick="showUndefined()">Run Example</button>
+            </div>
+            
+            <div class="example">
+                <h3>5. Null</h3>
+                <p><code>let y = null;</code></p>
+                <button onclick="showNull()">Run Example</button>
+            </div>
+        </div>
+        
+        <!-- Non-Primitive Types -->
+        <div class="section">
+            <h2>Non-Primitive Types</h2>
+            
+            <div class="example">
+                <h3>1. Object</h3>
+                <p><code>let person = {name: "John", age: 30};</code></p>
+                <button onclick="showObject()">Run Example</button>
+            </div>
+            
+            <div class="example">
+                <h3>2. Array</h3>
+                <p><code>let fruits = ["Apple", "Banana"];</code></p>
+                <button onclick="showArray()">Run Example</button>
+            </div>
+            
+            <div class="example">
+                <h3>3. Function</h3>
+                <p><code>function greet() { return "Hello"; }</code></p>
+                <button onclick="showFunction()">Run Example</button>
+            </div>
+        </div>
+        
+        <!-- Output Section -->
+        <div class="output-section">
+            <h2>Output Console</h2>
+            <div id="output"></div>
+            <button onclick="clearOutput()" class="clear-btn">Clear</button>
+            <button onclick="runAll()" class="run-btn">Run All Examples</button>
+        </div>
+        
+        <!-- Summary -->
+        <div class="summary">
+            <h2>Quick Summary</h2>
+            <p> <strong>Primitive Types:</strong> Simple values (7 types)</p>
+            <p> <strong>Non-Primitive Types:</strong> Complex values (Objects, Arrays, Functions)</p>
+            <p> <strong>Check type:</strong> Use <code>typeof</code> operator</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
